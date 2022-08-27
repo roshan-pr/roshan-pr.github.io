@@ -5,3 +5,5 @@ draft: true
 ---
 
 Hello
+
+![nature](/images/nature.jpeg)
