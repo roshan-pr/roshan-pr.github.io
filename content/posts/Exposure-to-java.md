@@ -13,6 +13,7 @@ draft: false
     - which means multiple processes can execute the code at the same time. Many java programming statements can be executed together instead of executing in one by one in sequence.
 
 ## Features
+
   - Portability: java source code can be developed and compiled on one machine and can be made to run on the same or any other operating system.
   
   - Object-Oriented: Everything is treated as an object, and all the operations involved in application development are completed using these objects.
@@ -30,3 +31,64 @@ draft: false
   - Distributed: It supports developing distributed applications. It provides features like Remote Method Invocation, through which a program can communicate with another program present in the remote machines through the network and generates the desired output.
   
   - Performance: It provides high performance as it uses bytecode, which can be translated into machine code with ease and high speed. It has Just in time compiler through which high performance is achieved.
+
+## Code execution
+
+```sh
+$ javac HelloWorld.java
+$ java HelloWorld
+```
+
+### Variable declaration
+
+```java
+int i = 10;
+String name = 'John';
+float num = 2.2;
+char a = 'A';
+```
+
+### Recursion
+
+```java
+class Factorial {
+  public static void main(String[] args) {
+    System.out.println(factorial(0));
+    System.out.println(factorial(3));
+    System.out.println(factorial(5));
+  }
+
+  public static int factorial(int number) {
+    if(number == 0)
+      return 1;
+
+    return number * factorial(number - 1);
+  }
+}
+```
+```java
+class Fibonacci {
+  public static int nthFibonacci(int term) {
+    if(term == 1)
+      return 0;
+    if(term == 2)
+      return 1;
+
+    return nthFibonacci(term - 1) + nthFibonacci(term - 2);
+  }
+
+  public static void printNthFibonacci(int term) {
+    System.out.println(term + "th term fibonacci : " + nthFibonacci(term));
+  }
+
+  public static void main(String[] args) {
+    printNthFibonacci(5);
+    printNthFibonacci(7);
+    printNthFibonacci(6);
+    printNthFibonacci(5);
+    printNthFibonacci(4);
+    printNthFibonacci(3);
+    printNthFibonacci(2);
+  }
+}
+```
